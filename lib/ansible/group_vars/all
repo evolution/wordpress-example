@@ -1,0 +1,24 @@
+---
+domain:         generatortest.com
+
+mysql:
+  name:         generator_test
+  user:         generator_test
+  password:     generator_test
+  host:         127.0.0.1
+
+php_settings:
+  # memory_limit:
+
+reserved_memory:
+  # mysql:
+  # system:
+apache_settings:
+  # start_servers:
+  # min_spare_servers:
+  # max_spare_servers:
+  # max_clients:
+  # max_requests_per_child:
+
+mail:
+  postmaster: no-reply@generatortest.com
