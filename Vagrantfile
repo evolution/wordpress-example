@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     box.vm.hostname = "local.example.com"
 
     # Additional host names for testing
-    box.hostmanager.aliases = ["staging.example.com", "production.example.com"]
+    box.hostmanager.aliases = ["example.com"]
 
     # Static IP for testing.
     box.vm.network :private_network, ip: "192.168.137.137"
