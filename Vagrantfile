@@ -16,10 +16,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define :local do |box|
-    box.vm.hostname = "local.generatortest.com"
+    box.vm.hostname = "local.example.com"
 
     # Additional host names for testing
-    box.hostmanager.aliases = ["staging.generatortest.com", "production.generatortest.com"]
+    box.hostmanager.aliases = ["staging.example.com", "production.example.com"]
 
     # Static IP for testing.
     box.vm.network :private_network, ip: "192.168.137.137"
@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
     # Mount local SSH keys for deployments
     box.vm.synced_folder "~/.ssh", "/home/vagrant/.ssh"
 
-    # Provision local.generatortest.com
+    # Provision local.example.com
     box.vm.provision :shell do |shell|
-      shell.inline = "/vagrant/bin/provision -e stage=localhost"
+      shell.inline = "/vagrant/bin/provision -e stage=local"
     end
   end
 

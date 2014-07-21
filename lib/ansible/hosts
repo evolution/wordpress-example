@@ -1,11 +1,8 @@
-[localhost]
-127.0.0.1 ansible_connection=local
-
 [local]
-local.generatortest.com stage=local
+local.example.com stage=local
 
 [production]
-production.generatortest.com stage=production
+production.example.com stage=production
 
 [staging]
-staging.generatortest.com stage=staging
+staging.example.com stage=staging

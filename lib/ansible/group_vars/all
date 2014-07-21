@@ -1,10 +1,10 @@
 ---
-domain:         generatortest.com
+domain:         example.com
 
 mysql:
-  name:         generator_test
-  user:         generator_test
-  password:     generator_test
+  name:         example_db
+  user:         example_user
+  password:     example
   host:         127.0.0.1
 
 php_settings:
@@ -21,4 +21,4 @@ apache_settings:
   # max_requests_per_child:
 
 mail:
-  postmaster: no-reply@generatortest.com
+  postmaster: no-reply@example.com
