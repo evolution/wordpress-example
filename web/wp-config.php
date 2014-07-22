@@ -83,7 +83,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', WP_ENV === 'local');
+define('WP_DEBUG', Genesis::getEnv() === 'local');
 
 /**
  * Custom overrides
