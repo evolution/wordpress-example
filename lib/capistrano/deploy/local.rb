@@ -3,4 +3,4 @@ server 'local.example.com',
   user:         fetch(:user),
   ssh_options:  fetch(:ssh_options)
 
-set :release_path, "/vagrant"
+set :wp_path,   "/vagrant/web/wp"

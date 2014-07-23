@@ -5,6 +5,7 @@ lock '3.2.1'
 set :application,   "Example.com"
 set :domain,        "example.com"
 set :deploy_to,     "/var/www/#{fetch(:domain)}/#{fetch(:stage)}/#{fetch(:branch)}"
+set :wp_path,       "#{release_path}/web/wp"
 
 # Added for testing purposes
 set :repo_url,      "https://github.com/evolution/wordpress-example.git"
