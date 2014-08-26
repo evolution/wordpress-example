@@ -1,7 +1,7 @@
 [Example.com][example.com]
 ==========================
 
-> Powered by [Genesis WordPress ][genesis-wordpress]
+> Powered by [Genesis WordPress ~1.0.0][genesis-wordpress]
 
 
 [example.com]: http://example.com/
