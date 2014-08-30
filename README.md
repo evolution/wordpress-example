@@ -1,8 +1,8 @@
 [Example.com][example.com]
 ==========================
 
-> Powered by [Genesis WordPress ~1.0.0][genesis-wordpress]
+> Powered by [Evolution WordPress ~1.0.0][evolution-wordpress]
 
 
 [example.com]: http://example.com/
-[genesis-wordpress]: https://github.com/genesis/wordpress/
+[evolution-wordpress]: https://github.com/evolution/wordpress/

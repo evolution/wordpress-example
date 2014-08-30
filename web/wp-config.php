@@ -1,7 +1,7 @@
 <?php
 
-/* Include Genesis to use with WordPress */
-require_once(dirname(__FILE__) . '/../bower_components/genesis-wordpress/lib/wordpress/Genesis.php');
+/* Include Evolution to use with WordPress */
+require_once(dirname(__FILE__) . '/../bower_components/evolution-wordpress/lib/wordpress/Evolution.php');
 
 /**
  * The base configurations of the WordPress.
@@ -20,7 +20,7 @@ require_once(dirname(__FILE__) . '/../bower_components/genesis-wordpress/lib/wor
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', Genesis::getDbName('example_db'));
+define('DB_NAME', Evolution::getDbName('example_db'));
 
 /** MySQL database username */
 define('DB_USER', 'example_user');
@@ -83,7 +83,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', Genesis::getEnv() === 'local');
+define('WP_DEBUG', Evolution::getEnv() === 'local');
 
 /**
  * Custom overrides
@@ -96,7 +96,7 @@ define('FS_METHOD', 'direct');
 define('WP_AUTO_UPDATE_CORE', false);
 define('WP_CONTENT_DIR', dirname(__FILE__) . CONTENT_DIR);
 define('WP_CONTENT_URL', CONTENT_DIR);
-define('WP_ENV', Genesis::getEnv());
+define('WP_ENV', Evolution::getEnv());
 define('WP_HOME', '/');
 define('WP_POST_REVISIONS', 5);
 define('WP_SITEURL', '/wp');
