@@ -2,7 +2,7 @@
   "name": "Example.com",
   "version": "1.0.0",
   "dependencies": {
-    "evolution-wordpress": "~1.0.0",
+    "evolution-wordpress": "",
     "wordpress": ""
   }
 }
