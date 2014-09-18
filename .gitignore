@@ -1,7 +1,8 @@
 # Sensitive files
-# (Remove these if you want keep credentials with the repo)
-id_rsa
-*.pem
+# Remove to version deployment keys
+lib/ansible/files/ssh/
+# Remove to version SSL certificates & configuration
+lib/ansible/files/ssl/
 
 # Application files
 error_log

@@ -14,12 +14,13 @@
     - mysql             # (Required) Database server (Soon: Maria)
     - php               # (Required) PHP 5.3
     - node              # (Required) Tools for deployment (e.g. `bower`)
+    - wp-cli            # (Required) CLI for managing WordPress
+
+    # Optional Features
     - apache-prefork    # (Optional) Dynamic Apache performance tuning
     - varnish           # (Optional) High-performance reverse-proxy cache
-    - pound             # (Optional) SSL support & decryption
-    - wp-cli            # (Optional) CLI for managing WordPress
     - mail              # (Optional) Ability to send e-mails from the server (i.e. PHP)
-    - debug             # (Optional) Tools to monitor processes & debug when SSH'd in
+    - debug             # (Optional) Tools to monitor processes & debug when on the server
 
   post_tasks:
     - name:             Generate init.d for installed evolution services
