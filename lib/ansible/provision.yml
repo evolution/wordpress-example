@@ -17,9 +17,11 @@
     - wp-cli            # (Required) CLI for managing WordPress
 
     # Optional Features
+    - pound             # (Optional) SSL support & decryption
     - apache-prefork    # (Optional) Dynamic Apache performance tuning
     - varnish           # (Optional) High-performance reverse-proxy cache
     - mail              # (Optional) Ability to send e-mails from the server (i.e. PHP)
+    - firewall          # (Optional) Simple intrusion protection via Fail2ban + iptables
     - debug             # (Optional) Tools to monitor processes & debug when on the server
 
   post_tasks:
