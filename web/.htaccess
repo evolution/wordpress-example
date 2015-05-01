@@ -1,3 +1,13 @@
+# BEGIN Evolution WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+# Prevent spidering of non-canonical URLs, such as `[*.]staging.*` and `production.*`.
+RewriteCond %{HTTP_HOST} (^local|staging|^production)\.example\.com$ [NC]
+RewriteRule ^robots.txt$ no_robots.txt [L]
+</IfModule>
+# END Evolution WordPress
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

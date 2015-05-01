@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
 
     # Static IP for testing.
     box.vm.network :private_network, ip: "192.168.137.137"
-    box.vm.network :forwarded_port, guest: 22, host: 7137, auto_correct: true
+    box.vm.network :forwarded_port, guest: 22, id: 'ssh', host: 7137, auto_correct: true
 
     box.ssh.forward_agent = true
 
@@ -37,8 +37,11 @@ Vagrant.configure("2") do |config|
     box.vm.synced_folder "~/.ssh", "/home/vagrant/.ssh"
 
     # Provision local.example.com
-    box.vm.provision :shell do |shell|
-      shell.inline = "/vagrant/bin/provision -e stage=local"
+    box.vm.provision :ansible do |ansible|
+      ansible.playbook = "lib/ansible/provision.yml"
+      ansible.inventory_path = "lib/ansible/hosts"
+      ansible.limit = "local"
+      ansible.extra_vars = { stage: "local" }
     end
   end
 
