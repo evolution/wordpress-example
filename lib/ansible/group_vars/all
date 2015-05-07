@@ -1,6 +1,10 @@
 ---
-evolve_version: 1.0.14
+evolve_version: 1.0.15
 domain:         example.com
+www:            false
+
+monitoring:
+  newrelic:     ''
 
 mysql:
   name:         example_db
