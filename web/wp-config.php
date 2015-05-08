@@ -1,7 +1,7 @@
 <?php
 
 /* Include Evolution to use with WordPress */
-require_once(dirname(__FILE__) . '/../bower_components/evolution-wordpress/lib/wordpress/Evolution.php');
+require_once(dirname(__FILE__) . '/../Evolution.php');
 
 /**
  * The base configurations of the WordPress.
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'yH1e(m^{Q1^|&iJK~zfb!.Da-FTvX8K61A>XDMD|kGX+EV8[m3!f{zJppU^uq]-f');
-define('SECURE_AUTH_KEY',  'T#1l>{Q#dHyE7i[N4$n;Qp*-v%Y9!4KG|PbUB]L& C|/SZY{&gwXc&ZK0Q7h.A5.');
-define('LOGGED_IN_KEY',    'Bcm4^ot-g}T8M50TC*~N>/Fl[C+-cUm<AL7UnR C<`y|y#vAQuD0t1r)uhm+>g/o');
-define('NONCE_KEY',        'i_67nKGu=OVQ;gAaJQ^^r@mzY.sT/-OO?)(ZzqVfx&s(YK6stY69FU>Nl$<6(>^f');
-define('AUTH_SALT',        'M]8Y>V@UaYc1*75@v]?-)q4fr4UtI?``*$qlie@vk<]JB@_|H!?@BkZG^Cyd04b(');
-define('SECURE_AUTH_SALT', 'J.MVo^2RAi)<76#5|HbEm6S[]Bvy%&I`gB3?>){FJswa*4=}]k>3Yv;dT7[v3Ndn');
-define('LOGGED_IN_SALT',   'U[5Og*.I3A4a3/M{-GK,}4-ie:EK8j:~c~pQT|.MK6-K22~q>(?J_jFv4^TPkm9I');
-define('NONCE_SALT',       'yV~8-#:`q8]6MU6d2}R}WPA<|_PO/r*jFw)V<2^^%s84/jDe E[edpZ989 ,zp?k');
+define('AUTH_KEY',         '%p_[wKbB0Uex|baQn-vI)06@oyl+xRjF7=fmG!l@>?A>QO2wbWrxo9V[f6#z+C@.');
+define('SECURE_AUTH_KEY',  'wp6|m5|NPTMGFb-Z`U@u,+tv-:[ME:#)6-M-/J)! --nrntXC~0yucm|[r6r3$bt');
+define('LOGGED_IN_KEY',    'egB9Hb)J8G/|dj<X](,OOBOOpD8;}7bxiskHrNQHh4kpR&,j9]#O7wnW-]J`M%Bl');
+define('NONCE_KEY',        '%-Yt/D,<Vq`+G,PP64{R.~5 idO(=IY+< 3O-MJ7yoe7=nd^~zP|$=)|DZp2A7q!');
+define('AUTH_SALT',        '|eIq,Dd3BR*|JJ%~Tmh42p=+?)Ny9>[l}5q~+3i-**xS|S|?LY=yp,IE|J9K*(&?');
+define('SECURE_AUTH_SALT', 'v)ig<Ehiov</*kh?pi;vI^Im:h<bVj%K|>4jWW,^[3JF%#%x8DVz4.i0bb+e2PBn');
+define('LOGGED_IN_SALT',   'p.^+i?SH.AphUN(%FC]sUg?gwYKiPX5=otnha_?f[*xv9l$.D+JJt>FVhFHo;|KF');
+define('NONCE_SALT',       '):a+A+K,4<-K4H%M<<tU$REE+(*jpjOWJ|t #&F}>^o3-6N6*c|5|@wcvWy=-%u4');
 
 
 /**#@-*/
@@ -87,9 +87,9 @@ define('WP_AUTO_UPDATE_CORE', false);
 define('WP_CONTENT_DIR', dirname(__FILE__) . CONTENT_DIR);
 define('WP_CONTENT_URL', CONTENT_DIR);
 define('WP_ENV', Evolution::getEnv());
-define('WP_HOME', '/');
+define('WP_HOME', 'http://'.Evolution::getHostname().'/');
 define('WP_POST_REVISIONS', 5);
-define('WP_SITEURL', '/wp');
+define('WP_SITEURL', 'http://'.Evolution::getHostname().'/wp');
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
