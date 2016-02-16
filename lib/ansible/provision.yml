@@ -16,10 +16,12 @@
     # Optional Features
     - pound             # (Optional) SSL support & decryption
     - apache-prefork    # (Optional) Dynamic Apache performance tuning
+    - php-hardened      # (Optional) Security-minded restrictions on PHP userland
     - varnish           # (Optional) High-performance reverse-proxy cache
     - mail              # (Optional) Ability to send e-mails from the server (i.e. PHP)
     - firewall          # (Optional) Simple intrusion protection via Fail2ban + iptables
     - debug             # (Optional) Tools to monitor processes & debug when on the server
+    - awstats           # (Optional) HTTP log analyzer
     # /Optional Features
 
     - cleanup           # (Required) Generate init.d for installed evolution services
