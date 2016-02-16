@@ -24,11 +24,14 @@ namespace :deploy do
     end
   end
   after :finished, :launch_browser do
-    require 'launchy'
-    uri = "http://#{fetch(:stage)}.#{fetch(:domain)}/"
-    Launchy.open(uri) do |exception|
-      puts "Failed to open #{uri} because #{exception}"
+    subdomain = fetch(:stage).to_s
+    branch = fetch(:branch).to_s
+
+    if subdomain == 'staging' && branch != 'master'
+      subdomain = "#{branch}.staging"
     end
+
+    invoke "evolve:launch_browser", "http://#{subdomain}.#{fetch(:domain)}/"
   end
 end
 
