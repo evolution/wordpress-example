@@ -35,9 +35,6 @@ Vagrant.configure("2") do |config|
   config.vm.define :local do |box|
     box.vm.hostname = "local.example.com"
 
-    # Additional host names for testing
-    box.hostmanager.aliases = ["example.com", "production.example.com", "www.example.com"]
-
     # Static IP for testing.
     box.vm.network :private_network, ip: "192.168.137.137"
     box.vm.network :forwarded_port, guest: 22, id: 'ssh', host: 7137, auto_correct: true
