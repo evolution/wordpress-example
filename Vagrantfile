@@ -1,3 +1,28 @@
+# Borrowed from: http://superuser.com/questions/701735/run-script-on-host-machine-during-vagrant-up#answer-992220
+module LocalCommand
+  class Config < Vagrant.plugin("2", :config)
+    attr_accessor :command
+  end
+
+  class Plugin < Vagrant.plugin("2")
+    name "local_shell"
+
+    config(:local_shell, :provisioner) do
+      Config
+    end
+
+    provisioner(:local_shell) do
+      Provisioner
+    end
+  end
+
+  class Provisioner < Vagrant.plugin("2", :provisioner)
+    def provision
+      result = system "#{config.command}"
+    end
+  end
+end
+
 Vagrant.configure("2") do |config|
   # Configuring the hostmanager to automatically alter the hosts file for development testing
   config.hostmanager.enabled            = true
@@ -48,8 +73,17 @@ Vagrant.configure("2") do |config|
     # Remount the default shared folder as NFS for caching and speed
     box.vm.synced_folder ".", "/vagrant", :nfs => true
 
+    # Remove any known hosts when (re)provisioning
+    box.vm.provision "ssh-cleanup", type: "local_shell", command: "(ssh-keygen -R local.example.com && ssh-keygen -R 192.168.137.137) || :"
+
     # Provision local.example.com
     box.vm.provision :ansible do |ansible|
+      galaxy_reqs = "lib/ansible/galaxy.yml"
+      if File.exists?(galaxy_reqs)
+        unless File.read(galaxy_reqs).strip.empty?
+          ansible.galaxy_role_file = galaxy_reqs
+        end
+      end
       ansible.playbook = "lib/ansible/provision.yml"
       ansible.inventory_path = "lib/ansible/hosts"
       ansible.limit = "local"

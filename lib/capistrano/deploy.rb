@@ -34,6 +34,3 @@ namespace :deploy do
     invoke "evolve:launch_browser", "http://#{subdomain}.#{fetch(:domain)}/"
   end
 end
-
-# Added for testing purposes
-set :repo_url,      "https://github.com/evolution/wordpress-example.git"
