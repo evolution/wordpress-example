@@ -10,7 +10,7 @@
     - apache            # (Required) Web server (Soon: Nginx)
     - mysql             # (Required) Database server (Soon: Maria)
     - php               # (Required) PHP 5.3
-    - node              # (Required) Tools for deployment (e.g. `bower`)
+    - node              # (Required) Tools for deployment + dependencies (e.g. `npm`)
     - wp-cli            # (Required) CLI for managing WordPress
 
     # Optional Features
@@ -20,7 +20,7 @@
     - varnish           # (Optional) High-performance reverse-proxy cache
     - mail              # (Optional) Ability to send e-mails from the server (i.e. PHP)
     - firewall          # (Optional) Simple intrusion protection via Fail2ban + iptables
-    - debug             # (Optional) Tools to monitor processes & debug when on the server
+    - debug             # (Optional) Tools to monitor processes &amp; debug when on the server
     - awstats           # (Optional) HTTP log analyzer
     # /Optional Features
 
