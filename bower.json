@@ -1,0 +1,8 @@
+{
+  "private": false,
+  "name": "Example.com",
+  "version": "1.0.0",
+  "dependencies": {
+    "sharrre": "~1.3.5"
+  }
+}

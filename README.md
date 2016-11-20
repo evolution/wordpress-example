@@ -1,7 +1,7 @@
 [Example.com][example.com]
 ==========================
 
-> Powered by [Evolution WordPress][evolution-wordpress] *vv2.0.0-alpha*
+> Powered by [Evolution WordPress][evolution-wordpress] *2.0.0-alpha*
 
 
 [example.com]: http://example.com/

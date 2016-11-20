@@ -5,7 +5,7 @@
     "node": ">=4"
   },
   "dependencies": {
-    "evolution-wordpress": "~v2.0.0-alpha"
+    "evolution-wordpress": "evolution/wordpress#860f3ccbf622cee294a99c42cec842135d206a65"
   },
   "scripts": {
     "postinstall": "node node_modules/evolution-wordpress/bin/postinstall"
