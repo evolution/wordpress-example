@@ -1,17 +1,15 @@
 ---
 evolve_version: 2.0.0
-wp_version:     4.4.2
+wp_version:     4.7.5
 domain:         example.com
 www:            false
-
-monitoring:
-  newrelic:     ''
 
 mysql:
   name:         example_db
   user:         example_user
   password:     example
   host:         127.0.0.1
+
 
 # php__memory_limit:
 
@@ -20,6 +18,13 @@ mysql:
 # apache__max_spare_servers:
 # apache__max_clients:
 # apache__max_requests_per_child:
+
+# wordpress__autoupdate: false
+# wordpress__autoupdate_skip_plugins: false
+# wordpress__autoupdate_skip_themes: false
+# wordpress__xmlrpc_allow: false
+# wordpress__xmlrpc_whitelist:
+#   - "local"
 
 mail__postmaster: no-reply@example.com
 

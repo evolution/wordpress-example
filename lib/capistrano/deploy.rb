@@ -23,6 +23,14 @@ namespace :deploy do
       execute "cd #{release_path} && npm install --production"
     end
   end
+  after :updated, :bower_install do
+    on roles(:web) do
+      bower_exists = test "[ -f #{release_path}/bower.json ]"
+      if bower_exists
+        execute "cd #{release_path} && bower install"
+      end
+    end
+  end
   after :finished, :launch_browser do
     subdomain = fetch(:stage).to_s
     branch = fetch(:branch).to_s
